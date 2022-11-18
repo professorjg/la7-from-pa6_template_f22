@@ -5,10 +5,10 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.security.Permission;
 
-import edu.wit.cs.comp1000.PA6a;
+import edu.wit.cs.comp1000.LA7a;
 import junit.framework.TestCase;
 
-public class PA6aTestCase extends TestCase {
+public class LA7aTestCase extends TestCase {
 	
 	@SuppressWarnings("serial")
 	private static class ExitException extends SecurityException {}
@@ -42,7 +42,7 @@ public class PA6aTestCase extends TestCase {
 	public void _testLeapYear(int year, boolean expected) {
 		Boolean result = null;
 		try {
-			result = PA6a.isLeapYear(year);
+			result = LA7a.isLeapYear(year);
 		} catch (ExitException e) {}
 		assertEquals((Object) expected, (Object) result);
 	}
@@ -96,7 +96,7 @@ public class PA6aTestCase extends TestCase {
 		System.setOut(new PrintStream(outContent));
 		Integer result = null;
 		try {
-			result = PA6a.printMonth(month, startDay, numDays);
+			result = LA7a.printMonth(month, startDay, numDays);
 		} catch (ExitException e) {}
 		System.setOut(null);
 		
@@ -152,7 +152,7 @@ public class PA6aTestCase extends TestCase {
 		System.setOut(new PrintStream(outContent));
 		
 		try {
-			PA6a.main(new String[] { "foo" });
+			LA7a.main(new String[] { "foo" });
 		} catch (ExitException e) {}
 		assertEquals(output, outContent.toString());
 		

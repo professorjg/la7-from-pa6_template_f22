@@ -1,7 +1,7 @@
 package edu.wit.cs.comp1000;
 
 // TODO: document this class
-public class PA6a {
+public class LA7a {
 	
 	/**
 	 * Error to output if year is not positive
